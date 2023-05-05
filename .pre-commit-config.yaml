@@ -1,0 +1,18 @@
+- repo: local
+  hooks:
+    - id: eslint-check
+      name: eslint-check
+      language: system
+      entry: bash -c 'npx next lint --fix'
+      files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
+      types: [file]
+      pass_filenames: false
+- repo: local
+  hooks:
+    - id: typescript-check
+      name: typescript-check
+      language: system
+      entry: bash -c 'npx tsc'
+      files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
+      types: [file]
+      pass_filenames: false
