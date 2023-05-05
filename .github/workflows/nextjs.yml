@@ -5,10 +5,13 @@ on:
     branches: ["master"]
   pull_request:
     branches: ["master"]
+    paths:
+      - "**"
 
 defaults:
   run:
     shell: bash
+    # working-directory: frontend/
 
 jobs:
   build:
